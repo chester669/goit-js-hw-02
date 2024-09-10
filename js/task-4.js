@@ -26,3 +26,26 @@ console.log(getShippingCost("China")); // "Shipping to China will cost 100 credi
 console.log(getShippingCost("Chile")); // "Shipping to Chile will cost 250 credits"
 console.log(getShippingCost("Jamaica")); // "Shipping to Jamaica will cost 120 credits"
 console.log(getShippingCost("Sweden")); // "Sorry, there is no delivery to your country"
+
+function distance(place) {
+  let metres;
+  switch (place.toLowerCase()) {
+    case "home":
+      metres = 100;
+      break;
+    case "work":
+      metres = 2000;
+      break;
+    case "chornomorka":
+      metres = 5000;
+      break;
+    default:
+      return "sorry you are Living at Troeshchina";
+  }
+  return `distance to ${place} is ${metres} metres`;
+}
+
+console.log(distance("Home"));
+console.log(distance("gym"));
+console.log(distance("cHornomorka"));
+console.log(distance("work"));
